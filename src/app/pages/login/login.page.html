@@ -1,0 +1,36 @@
+<form [formGroup]="loginForm">
+
+  <ion-item>
+    <ion-input
+      label="Email"
+      labelPlacement="floating"
+      type="email"
+      formControlName="email">
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input
+      label="Password"
+      labelPlacement="floating"
+      type="password"
+      formControlName="password">
+    </ion-input>
+  </ion-item>
+
+  <ion-button
+    expand="block"
+    type="button"
+    (click)="login()">
+    Login
+  </ion-button>
+
+  <ion-button
+  expand="block"
+  fill="clear"
+  type="button"
+  (click)="goToRegister()">
+  Sign Up
+</ion-button>
+
+</form>

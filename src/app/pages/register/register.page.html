@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <form [formGroup]="registerForm">
+
+    <ion-item>
+      <ion-input
+        label="Name"
+        labelPlacement="floating"
+        type="text"
+        formControlName="name">
+      </ion-input>
+    </ion-item>
+
+    @if (registerForm.controls.name.touched &&
+          registerForm.controls.name.invalid) {
+      <ion-text color="danger">
+        <p>Name is required</p>
+      </ion-text>
+    }
+
+    <ion-item>
+      <ion-input
+        label="Email"
+        labelPlacement="floating"
+        type="email"
+        formControlName="email">
+      </ion-input>
+    </ion-item>
+
+    @if (registerForm.controls.email.touched &&
+          registerForm.controls.email.invalid) {
+      <ion-text color="danger">
+        <p>Enter a valid email</p>
+      </ion-text>
+    }
+
+    <ion-item>
+      <ion-input
+        label="Password"
+        labelPlacement="floating"
+        type="password"
+        formControlName="password">
+      </ion-input>
+    </ion-item>
+
+    @if (registerForm.controls.password.touched &&
+          registerForm.controls.password.invalid) {
+      <ion-text color="danger">
+        <p>Password must be at least 6 characters</p>
+      </ion-text>
+    }
+
+    <ion-item>
+      <ion-input
+        label="Mobile Number"
+        labelPlacement="floating"
+        type="tel"
+        formControlName="mobileNumber">
+      </ion-input>
+    </ion-item>
+
+    @if (registerForm.controls.mobileNumber.touched &&
+          registerForm.controls.mobileNumber.invalid) {
+      <ion-text color="danger">
+        <p>Mobile number is required</p>
+      </ion-text>
+    }
+
+    <ion-button
+      expand="block"
+      type="button"
+      (click)="register()">
+      Register
+    </ion-button>
+
+  </form>
+
+</ion-content>
