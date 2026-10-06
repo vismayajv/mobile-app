@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-title>Register</ion-title>
   </ion-toolbar>
@@ -80,5 +80,169 @@
     </ion-button>
 
   </form>
+
+</ion-content> -->
+
+
+<ion-content class="register-page">
+
+  <div class="register-container">
+
+```
+<!-- Brand -->
+<div class="brand-section">
+
+  <div class="brand-logo">
+    <span>VM</span>
+  </div>
+
+  <h1>Vehicle Manager</h1>
+
+  <p>
+    Create your account and<br>
+    start managing your vehicle.
+  </p>
+
+</div>
+
+<!-- Register Card -->
+<div class="register-card">
+
+  <div class="welcome-section">
+    <h2>Create account</h2>
+    <p>Enter your details to get started</p>
+  </div>
+
+  <form [formGroup]="registerForm">
+
+    <!-- Name -->
+    <div class="input-group">
+
+      <ion-input
+        label="Full name"
+        labelPlacement="floating"
+        type="text"
+        fill="outline"
+        formControlName="name">
+      </ion-input>
+
+      @if (registerForm.controls.name.touched &&
+      registerForm.controls.name.invalid) {
+
+        <ion-text color="danger">
+          <small>Name is required.</small>
+        </ion-text>
+
+      }
+
+    </div>
+
+    <!-- Email -->
+    <div class="input-group">
+
+      <ion-input
+        label="Email address"
+        labelPlacement="floating"
+        type="email"
+        fill="outline"
+        formControlName="email">
+      </ion-input>
+
+      @if (registerForm.controls.email.touched &&
+      registerForm.controls.email.invalid) {
+
+        <ion-text color="danger">
+          <small>Please enter a valid email address.</small>
+        </ion-text>
+
+      }
+
+    </div>
+
+    <!-- Mobile Number -->
+    <div class="input-group">
+
+      <ion-input
+        label="Mobile number"
+        labelPlacement="floating"
+        type="tel"
+        fill="outline"
+        formControlName="mobileNumber">
+      </ion-input>
+
+      @if (registerForm.controls.mobileNumber.touched &&
+      registerForm.controls.mobileNumber.invalid) {
+
+        <ion-text color="danger">
+          <small>Mobile number is required.</small>
+        </ion-text>
+
+      }
+
+    </div>
+
+    <!-- Password -->
+    <div class="input-group">
+
+      <ion-input
+        label="Password"
+        labelPlacement="floating"
+        type="password"
+        fill="outline"
+        formControlName="password">
+      </ion-input>
+
+      @if (registerForm.controls.password.touched &&
+      registerForm.controls.password.invalid) {
+
+        <ion-text color="danger">
+          <small>
+            Password must be at least 6 characters.
+          </small>
+        </ion-text>
+
+      }
+
+    </div>
+
+    <!-- Register -->
+    <ion-button
+      class="register-button"
+      expand="block"
+      type="button"
+      (click)="register()">
+
+      Create Account
+
+    </ion-button>
+
+    <!-- Login -->
+    <div class="login-section">
+
+      <span>Already have an account?</span>
+
+      <ion-button
+        class="login-link"
+        fill="clear"
+        type="button"
+        (click)="login()">
+
+        Login
+
+      </ion-button>
+
+    </div>
+
+  </form>
+
+</div>
+
+<!-- Footer -->
+<p class="footer-text">
+  Manage smarter. Drive better.
+</p>
+```
+
+  </div>
 
 </ion-content>

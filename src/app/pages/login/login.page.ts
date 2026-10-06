@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormsModule, Validators,ReactiveFormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar,IonButton,IonItem,IonInput  } from '@ionic/angular';
+import { IonContent, IonHeader, IonTitle, IonToolbar,IonButton,IonItem,IonInput ,IonText } from '@ionic/angular';
 import { AuthService } from '../../services/auth';
 import { LoginRequest } from '../../models/login_request';
 import { Router } from '@angular/router';
@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
-  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule,IonButton,IonItem,ReactiveFormsModule,IonInput ]
+  imports: [IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule,IonButton,IonItem,ReactiveFormsModule,IonInput,IonText ]
 })
 export class LoginPage implements OnInit {
 

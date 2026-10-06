@@ -1,4 +1,4 @@
-<ion-header>
+<!-- <ion-header>
   <ion-toolbar>
     <ion-title>Vehicle Manager</ion-title>
   </ion-toolbar>
@@ -33,5 +33,143 @@
     (click)="logout()">
     Logout
   </ion-button>
+
+</ion-content> -->
+<ion-header class="dashboard-header">
+  <ion-toolbar>
+
+<ion-title>
+  Vehicle Manager
+</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="dashboard-page">
+
+  <div class="dashboard-container">
+
+```
+<!-- Welcome -->
+<div class="welcome-section">
+
+  <div>
+    <p class="welcome-label">Welcome back 👋</p>
+
+    <h1>Manage your vehicle</h1>
+
+    <p class="welcome-description">
+      Everything you need, all in one place.
+    </p>
+  </div>
+
+</div>
+
+<!-- My Vehicles -->
+<div class="vehicle-card">
+
+  <div class="feature-icon vehicle-icon">
+    🚗
+  </div>
+
+  <div class="feature-content">
+
+    <h2>My Vehicles</h2>
+
+    <p>
+      View and manage your vehicles
+    </p>
+
+  </div>
+
+  <div class="arrow">
+    ›
+  </div>
+
+</div>
+
+<!-- Features -->
+<div class="section-title">
+  <h2>Manage</h2>
+</div>
+
+<div class="feature-grid">
+
+  <!-- Fuel -->
+  <div class="feature-card">
+
+    <div class="feature-icon">
+      ⛽
+    </div>
+
+    <h3>Fuel</h3>
+
+    <p>
+      Track fuel & expenses
+    </p>
+
+  </div>
+
+  <!-- Documents -->
+  <div class="feature-card">
+
+    <div class="feature-icon">
+      📄
+    </div>
+
+    <h3>Documents</h3>
+
+    <p>
+      Keep documents organized
+    </p>
+
+  </div>
+
+  <!-- Maintenance -->
+  <div class="feature-card">
+
+    <div class="feature-icon">
+      🔧
+    </div>
+
+    <h3>Maintenance</h3>
+
+    <p>
+      Track service & repairs
+    </p>
+
+  </div>
+
+  <!-- Trips -->
+  <div class="feature-card">
+
+    <div class="feature-icon">
+      🛣️
+    </div>
+
+    <h3>Trips</h3>
+
+    <p>
+      Track your journeys
+    </p>
+
+  </div>
+
+</div>
+
+<!-- Logout -->
+<ion-button
+  class="logout-button"
+  expand="block"
+  fill="outline"
+  color="danger"
+  (click)="logout()">
+
+  Logout
+
+</ion-button>
+
+
+  </div>
 
 </ion-content>
